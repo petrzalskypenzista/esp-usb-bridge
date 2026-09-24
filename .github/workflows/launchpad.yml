@@ -25,8 +25,9 @@ jobs:
         run: |
           . $IDF_PATH/export.sh
           export SDKCONFIG_DEFAULTS="sdkconfig.defaults.esp_prog2;sdkconfig.defaults.esp32s3"
-          idf.py set-target esp32s2
-          idf.py build
+          #idf.py set-target esp32s2
+          #idf.py build
+          idf.py set-target esp32s2 build
           mkdir -p binaries
           idf.py merge-bin -o esp-prog2.bin
 
